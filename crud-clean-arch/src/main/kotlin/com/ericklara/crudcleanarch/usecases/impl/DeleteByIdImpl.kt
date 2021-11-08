@@ -6,10 +6,10 @@ import com.ericklara.crudcleanarch.usecases.DeleteProduct
 import org.springframework.stereotype.Service
 
 @Service
-class DeleteById(val db: ProductRepository): DeleteProduct {
+class DeleteByIdImpl(val db: ProductRepository): DeleteProduct {
     override fun execute(id: Int) {
-        val productToUpdate: Product = db.getById(id)
+        val productToDelete: Product = db.getById(id)
 
-        db.delete(productToUpdate)
+        db.delete(productToDelete)
     }
 }

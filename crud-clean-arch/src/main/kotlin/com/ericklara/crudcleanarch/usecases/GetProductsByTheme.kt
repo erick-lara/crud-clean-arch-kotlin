@@ -4,6 +4,6 @@ import com.ericklara.crudcleanarch.domain.Product
 import org.springframework.stereotype.Service
 
 @Service
-interface GetProductById {
-    fun execute(id: Int): Product
+interface GetProductsByTheme {
+    fun execute(theme: String): List<Product>
 }
